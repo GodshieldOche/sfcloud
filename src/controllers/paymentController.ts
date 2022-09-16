@@ -15,7 +15,7 @@ const createPaymentController = async (req: Request, res: Response) => {
             'X-Login': process.env.X_Login!,
             'X-Trans-Key': process.env.X_Trans_Key!,
             'Content-Type': 'application/json',
-            Authorization: `V2-HMAC-SHA256, Signature: ${signature(date, body).toString()}`
+            Authorization: `V2-HMAC-SHA256, Signature: ${signature(date, body)}`
         }
     })
 
